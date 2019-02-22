@@ -16,3 +16,8 @@ VALUES  ('Todd','123 Main Street','Lehi','UT',12345),
         ('Hunter','345 Real Street','Houston','TX',10293),
         ('Mark','987 Fake Street','San Diego','CA',78964),
         ('Bryan','432 N Sycamore','Philadelphia','PA',34567)
+
+ALTER TABLE houses 
+ADD COLUMN image TEXT,
+ADD COLUMN monthly_morgage_amount FLOAT,
+ADD COLUMN desired_rent FLOAT
