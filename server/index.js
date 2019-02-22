@@ -32,3 +32,4 @@ app.use(session({
 
 //ENDPOINTS WILL BE HERE
 app.get('/api/houses',ctrl.getHouses);
+app.post('/api/house',ctrl.addHouse);
