@@ -9,11 +9,14 @@ const app = express();
 
 app.use(express.json())
 
-massive(CONNECTION_STRING).then(
-    // db=>{app.set('db',db)
-    console.log('I am running!'),
+massive(CONNECTION_STRING).then(db=>{
+    app.set('db',db);
+    // console.log('I am running!');
     app.listen(SERVER_PORT,()=>console.log(`Don't give up from ${SERVER_PORT}`))
-// }
+}
+    
+    
+
 ).catch(err =>{
     return err
 });
@@ -28,4 +31,4 @@ app.use(session({
 }))
 
 //ENDPOINTS WILL BE HERE
-
+app.get('/api/houses',ctrl.getHouses);

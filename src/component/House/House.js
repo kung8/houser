@@ -1,6 +1,16 @@
-function House () {
+import React from 'react';
+
+function House (props) {
     return(
-        <div>House</div>
+        <div>
+            <p>{props.house.name}</p>
+            <p>{props.house.address}</p>
+            <p>{props.house.city}</p>
+            <p>{props.house.state}</p>
+            <p>{props.house.zipcode}</p>
+            <button>Delete</button>
+            <br/>
+        </div>
     )
 }
 
