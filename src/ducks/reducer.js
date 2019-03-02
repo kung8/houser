@@ -26,7 +26,8 @@ export default function reducer(state = initialState, action) {
             const { monthlyMortgageAmount, desiredMonthlyRent } = action.payload
             return { ...state, monthlyMortgageAmount, desiredMonthlyRent }
         case CANCEL_ADD:
-            return { ...state, initialState}
+            
+            return { ...state, name:'',address:'',city:'',payloadState:'',image:'',zipcode:'',monthlyMortgageAmount:'',desiredMonthlyRent:''}
         default:
             return state
     };

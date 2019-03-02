@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { addFinance, cancelAdd } from './../../ducks/reducer';
+import { addFinance} from './../../ducks/reducer';
 
 class Step3 extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            monthlyMortgageAmount: '',
-            desiredMonthlyRent: ''
+            monthlyMortgageAmount: this.props.monthlyMortgageAmount,
+            desiredMonthlyRent: this.props.desiredMonthlyRent
 
         };
     };
@@ -49,9 +49,10 @@ class Step3 extends Component {
             // console.log(this.props.state)
         })
     }
-
-
+    
+    
     render() {
+        // console.log(3333,this.props.image)
         const {name,address,city,payloadState,zipcode,image} = this.props;
         // console.log(111122, image)
         const {monthlyMortgageAmount,desiredMonthlyRent} =this.state;
@@ -81,7 +82,7 @@ class Step3 extends Component {
 }
 
 function mapStateToProps(reduxState) {
-    console.log(99999,reduxState)
+    // console.log(99999,reduxState)
     const { monthlyMortgageAmount, desiredMonthlyRent, name, address, city, payloadState, zipcode, image } = reduxState
     // console.log(1111,image)
     return {
@@ -96,4 +97,4 @@ function mapStateToProps(reduxState) {
     }
 }
 
-export default connect(mapStateToProps, { addFinance, cancelAdd })(Step3)
+export default connect(mapStateToProps, { addFinance })(Step3)

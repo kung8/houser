@@ -7,11 +7,11 @@ class Step1 extends Component {
         super(props);
 
         this.state = {
-            name: '',
-            address: '',
-            city: '',
-            state: '',
-            zipcode: ''
+            name: this.props.name,
+            address: this.props.address,
+            city: this.props.city,
+            state: this.props.payloadState,
+            zipcode: this.props.zipcode
         };
     };
 
