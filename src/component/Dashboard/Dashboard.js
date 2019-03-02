@@ -4,8 +4,8 @@ import axios from 'axios';
 import House from '../House/House';
 
 class Dashboard extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             houses: []
@@ -19,6 +19,7 @@ class Dashboard extends Component {
 
     getHouses = () => {
         axios.get('/api/houses').then(houses => {
+            console.log(5555,houses)
             this.setState({
                 houses: houses.data
             })
@@ -36,7 +37,9 @@ class Dashboard extends Component {
         )
     };
 
-
+    handleAddReroute=()=>{
+        this.props.history.push('/wizard/step1')
+    }
 
     render() {
         const { houses } = this.state;
@@ -51,9 +54,8 @@ class Dashboard extends Component {
         })
         return (
             <div>
-                <Link to='/wizard/step1'>
-                    <button>Add New Property</button>
-                </Link>
+                <button onClick={this.handleAddReroute}>Add New Property</button>
+                
                 {houseArray}
             </div>
 
