@@ -44,20 +44,25 @@ class Step2 extends Component {
 
     render() {
         // console.log(9999,this.props)
-        console.log(33333,this.props.monthlyMortgageAmount,this.props.desiredMonthlyRent)
+        // console.log(33333,this.props.monthlyMortgageAmount,this.props.desiredMonthlyRent)
         const {image} = this.state;
         return (
             <div>
-                <h1>Image URL</h1>
-                <input
-                    onChange={(e)=>this.handleImageInput(e.target.value)}
-                    value={image}
-                    placeholder="Image URL"
-                    type="text"
-                />
-
-                <button onClick={()=>this.handlePrevious(image)}>Previous Step</button>
-                <button onClick={()=>this.handleNext(image)}>Next Step</button>
+                <div className="input-container">
+                    <div className="input-values">
+                        <p>Image URL</p>
+                        <input
+                            className="address-image-amount-input"
+                            onChange={(e)=>this.handleImageInput(e.target.value)}
+                            value={image}
+                            type="text"
+                        />
+                    </div>
+                </div>
+                <div className="previous-next-button-container">
+                    <button className="previous-button" onClick={()=>this.handlePrevious(image)}>Previous Step</button>
+                    <button className="next-button" onClick={()=>this.handleNext(image)}>Next Step</button>
+                </div>
             </div>
         )
     }

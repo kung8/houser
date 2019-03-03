@@ -14,10 +14,13 @@ class Wizard extends Component {
 
 
         return (
-            <div>
-                <Link to="/">
-                    <button onClick={() => this.props.cancelAdd()}>Cancel</button>
-                </Link>
+            <div className="container">
+                <div className="wizard-header">
+                    <h1>Add New Listing</h1>
+                    <Link to="/">
+                        <button className="cancel-button" onClick={() => this.props.cancelAdd()}>Cancel</button>
+                    </Link>
+                </div>
                 <Route path='/wizard/step1' component={Step1} />
                 <Route path='/wizard/step2' component={Step2} />
                 <Route path='/wizard/step3' component={Step3} />

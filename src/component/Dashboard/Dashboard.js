@@ -53,10 +53,21 @@ class Dashboard extends Component {
             )
         })
         return (
-            <div>
-                <button onClick={this.handleAddReroute}>Add New Property</button>
-                
-                {houseArray}
+            <div className='container'>
+                    <div className="dash-header">
+                        <p>Dashboard</p>
+                        <button className="add-new-property-button" onClick={this.handleAddReroute}>Add New Property</button>
+                    </div>
+                    <div className="line-break">
+                        <p>------------------------------------------------------------------------------------------------------------</p>
+                    </div>
+                    <div className="text-beneath-line">
+                        <p>Home Listings</p>
+                    </div>    
+                    
+                    <div>
+                        {houseArray}
+                    </div> 
             </div>
 
         )

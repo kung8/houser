@@ -65,38 +65,56 @@ class Step1 extends Component {
         // console.log(11111,name,address,city,state,zipcode)
         return (
             <div>
-                <input
-                    onChange={(e)=>this.handleNameInput(e.target.value)}
-                    value={name}
-                    placeholder="Name"
-                    type="text"
-                />
-                <input
-                    onChange={(e)=>this.handleAddressInput(e.target.value)}
-                    value={address}
-                    placeholder="Address"
-                    type="text"
-                />
-                <input
-                    onChange={(e)=>this.handleCityInput(e.target.value)}
-                    value={city}
-                    placeholder="City"
-                    type="text"
-                />
-                <input
-                    onChange={(e)=>this.handleStateInput(e.target.value)}
-                    value={state}
-                    placeholder="State"
-                    type="text"
-                />
-                <input
-                    onChange={(e)=>this.handleZipcodeInput(e.target.value)}
-                    value={zipcode}
-                    placeholder="Zipcode"
-                    type="text"
-                />
-
-                <button onClick={()=>this.handleNext(name,address,city,state,zipcode)}>Next Step</button>
+                <div className="input-container">
+                    <div className="input-values">
+                        <p>Property Name</p>
+                        <input
+                            onChange={(e)=>this.handleNameInput(e.target.value)}
+                            value={name}
+                            type="text"
+                        />
+                    </div>
+                    <div className="input-values">
+                            <p>Address</p>
+                            <input 
+                                className="address-image-amount-input"
+                                onChange={(e)=>this.handleAddressInput(e.target.value)}
+                                value={address}
+                                type="text"
+                            />
+                    </div>
+                    <div className="city-state-zipcode-container">
+                        <div className="input-values">
+                            <p>City</p>
+                            <input
+                                onChange={(e)=>this.handleCityInput(e.target.value)}
+                                value={city}
+                                type="text"
+                            />
+                        </div>
+                        <div className="input-values">
+                            <p >State</p>
+                            <input
+                                onChange={(e)=>this.handleStateInput(e.target.value)}
+                                value={state}
+                                type="text"
+                            />
+                        </div>
+                        <div className="input-values">
+                            <p>Zipcode</p>
+                            <input
+                                className="zipcode-input"
+                                onChange={(e)=>this.handleZipcodeInput(e.target.value)}
+                                value={zipcode}
+                                placeholder="0"
+                                type="integer"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="next-button-container">
+                    <button className="next-button" onClick={()=>this.handleNext(name,address,city,state,zipcode)}>Next Step</button>
+                </div>
             </div>
         )
     }

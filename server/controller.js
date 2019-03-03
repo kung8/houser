@@ -16,9 +16,9 @@ module.exports = {
             console.log(houses)
             res.status(200).send(houses)
         })
-        // .catch(err => {
-        //     res.send('Not Added')
-        // })
+        .catch(err => {
+            res.send('Not Added')
+        })
     },
 
     deleteHouse: (req, res) => {

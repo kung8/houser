@@ -1,33 +1,217 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  background:#B6D3C1;  
+  width:100vw;
+  /* display:flex;
+  justify-content: center; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-formatting {
+  color:white;
+  height:70px;
+  background:#629675;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:0;
+  /* margin-left:300px; */
+  position:fixed;
+  width:100vw;
 }
 
-.App-link {
-  color: #61dafb;
+/*****************************DASHBOARD*******************************/
+
+.container {
+  background:#E8F3ED;
+  width:875px;
+  display:flex;
+  justify-content: center;
+  margin:0 auto;
+  padding:40px;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/***********Dash Header********/
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  font-size:40px;
+  font-family: sans-serif;
+  align-items: center; 
+  margin:50px 5px 0;
+  height:50px;
+}
+
+.add-new-property-button {
+  background:#86B981;
+}
+
+/*****Dash Line and Text******/
+
+.line-break {
+  height:20px;
+  margin:0 5px;
+}
+
+.text-beneath-line {
+  font-size:24px;
+}
+
+/*********House Cards**********/
+.house-box-container {
+  padding:5px;
+  display:flex;
+  justify-content: center
+}
+
+img {
+  height:200px;
+  width:300px;
+}
+
+.house-box {
+  border: black solid 1px;
+  width:850px;
+  height:250px;
+  align-content: center;
+  background:#DEDEDE;
+  padding:5px;
+  /* display: flex; */
+}
+
+.display-houses-info {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+p {
+  text-align: left;
+}
+
+.dashboard-delete-button {
+  height:30px;
+  width:30px;
+  background:white;
+}
+
+/*****************************Wizard*******************************/
+
+/*****re-using container****/
+
+/***********Wizard Header************/
+.wizard-header {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin:40px 5px 0;
+}
+
+.cancel-button {
+  background:lightcoral;
+  width:65px;
+  font-weight: 700;
+  font-size:14px;
+}
+
+button {
+  height:30px;
+  width:120px;
+  margin:10px;
+}
+
+/*input boxes are normally in a row and buttons too when created*/
+/*when you put input boxes within a div they stack up in a column*/
+/*when you put buttons inside a div they stack in a row*/
+
+/**************Wizard 1*******************/
+.input-container {
+  width:600px;
+  display: flex;
+  flex-direction:column;
+  margin:10px auto;
+}
+
+.input-values {
+  display:flex;
+  flex-direction: column;
+}
+
+.address-image-amount-input {
+  height:25px;
+  width:600px;
+  text-align:left;
+}
+
+
+
+.city-state-zipcode-container {
+  display:flex;
+  justify-content: space-between;
+}
+
+.zipcode-input {
+  height:25px;
+  width:100px;
+  text-align:left;
+}
+
+
+.next-button-container {
+  display:flex;
+  justify-content:flex-end;
+  margin-top:200px;
+}
+
+.previous-next-button-container {
+  display:flex;
+  justify-content:space-between;
+  margin-top:350px;
+}
+
+.previous-button {
+  background:black;
+  color:white;
+  font-size:16px;
+  width:120px;
+}
+
+.next-button {
+  background:#000000;
+  color:white;
+  font-size:16px; 
+  width:90px;
+} 
+
+.previous-complete-button-container {
+  display:flex;
+  justify-content:space-between;
+  margin-top:275px;
+}
+
+.complete-button {
+  background:lime;
+  color:white;
+  font-size:16px; 
+  width:90px;
+}
+
+input {
+  height:25px;
+  width:180px;
+  /* margin:10px; */
+  /*padding for the input box made the input box larger, not like the padding for the containers*/
+  text-align:left;
+
+}
+
+@media (hover:hover){
+  button:hover {
+      background:goldenrod;
   }
 }
