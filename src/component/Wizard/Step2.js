@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addImage } from './../../ducks/reducer'
-import { red } from 'ansi-colors';
 
 class Step2 extends Component {
     constructor(props) {
@@ -43,7 +42,7 @@ class Step2 extends Component {
 
 
     render() {
-        // console.log(9999,this.props)
+        console.log(9999,this.props)
         // console.log(33333,this.props.monthlyMortgageAmount,this.props.desiredMonthlyRent)
         const {image} = this.state;
         return (
@@ -73,8 +72,14 @@ function mapStateToProps(reduxState) {
     return {
         image:reduxState.image,
         monthlyMortgageAmount:reduxState.monthlyMortgageAmount,
-        desiredMonthlyRent:reduxState.desiredMonthlyRent
+        desiredMonthlyRent:reduxState.desiredMonthlyRent,
+        name:reduxState.name
+        
     }
 }
 
-export default connect(mapStateToProps,{ addImage })(Step2)
+const mapDispatchToProps = {
+    addImage
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Step2)

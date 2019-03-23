@@ -29,4 +29,4 @@ class Wizard extends Component {
     }
 }
 
-export default connect('', { cancelAdd })(Wizard)
+export default connect(0, { cancelAdd })(Wizard)
