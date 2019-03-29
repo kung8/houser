@@ -12,17 +12,22 @@ body {
   justify-content: center; */
 }
 
-.logo-formatting {
-  color:white;
+.header-container {
   height:70px;
   background:#629675;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin:0;
-  /* margin-left:300px; */
   position:fixed;
   width:100vw;
+}
+
+.logo-formatting {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-left:300px;
+}
+
+.logo-formatting h1 {
+  color:white;
 }
 
 /*****************************DASHBOARD*******************************/
